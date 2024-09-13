@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 # This is a class to organize the dictionary-related methods to support a hangman game.
 
 class Dictionary

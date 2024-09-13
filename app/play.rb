@@ -1,12 +1,9 @@
 # Script to run the hangman gameplay
-# frozen_string_literal: true
 
-require_relative 'app/dictionary'
-require_relative 'app/game'
+require_relative 'dictionary'
+require_relative 'game'
 
-private
-
-# This is a private method to the get the player's input if they want to continue a previous game 
+# This is a method to the get the player's input if they want to continue a previous game 
 def get_player_choice(existing_games_file_path, dictionary_file_path)
   puts "\nDo you want to continue a previous game? Y/N"
   choice = gets.chomp
@@ -19,7 +16,7 @@ def get_player_choice(existing_games_file_path, dictionary_file_path)
   end
 end
 
-# This is a private method to load a previous game file from the saved games directory.
+# This is a method to load a previous game file from the saved games directory.
 # After the file is loaded, a new Game object wil be created and it will be updated with all of the existing data.
 def load_previous_game(existing_games_file_path)
   puts "\nPlease continue an existing game by selecting the file path:"
@@ -38,7 +35,7 @@ def load_previous_game(existing_games_file_path)
   end
 end
 
-# This is a private method to start a new game. 
+# This is a method to start a new game. 
 # The order of operations is create game --> create dictionary --> choose word --> link dictionary/word to game --> play game.
 def play_new_game(existing_games_file_path, dictionary_file_path)
   puts 'Starting a new game...'

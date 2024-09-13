@@ -1,4 +1,3 @@
-# frozen_string_literal: true
 # This is a class to organize the primary gameplay methods, including file-related operations.
 
 class Game
